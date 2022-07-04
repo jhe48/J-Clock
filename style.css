@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#title {
+  top: 45px;
+  left: 372px;
+  position: absolute;
+  font-family: 'Rubik Glitch', cursive;
+  letter-spacing: 2px;
+  font-size: 41px;
+  color: #A0FC24;
+}
