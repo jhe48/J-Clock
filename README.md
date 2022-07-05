@@ -14,6 +14,22 @@
 - Three.js
 > This repository does not include these modules.
 
+## Setup
+Download [Node.js](https://nodejs.org/en/download/).
+Run these following commands:
+
+``` bash
+
+# Install dependencies (only for first time)
+npm init @vitejs/app
+npm install three
+
+# Serve at localhost:3000
+npm run dev
+
+```
+- *You can adjust the size on line 135 of jClock.js for that amount of stars to display on the screen.*
+
 ## Use of Project
 - This project is straightforward with its intended purpose, to tell time. You can just look at the clock to tell you the time, however, when do you ever get the opportunity to practice telling time when no presence of time is available? This will hopefully present a challenge to you. 
 
