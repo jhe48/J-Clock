@@ -9,6 +9,7 @@
 
   <body>
 
+    
     <!-- JavaScript(Models & Actions) -->
     <div>
       <canvas id="clock"></canvas>
@@ -16,10 +17,41 @@
       <script type="module" src="/jClock.js"></script>
     </div>
 
+
+
+
+
     <!-- Title of the page. -->
-    <div id="title"> <center>🚧 Clock Under Construction 🚧</center> </div>
+    <div class="title">
+      <p>
+        🚧 Clock Under Construction 🚧
+      </p>
+    </div>
 
 
 
+
+    
+    <!-- Running Clock -->
+    <div class="clock">
+
+      <!-- Hour Hand -->
+      <div class="hour">
+        <div class="hr" id="hr"></div>
+      </div>
+
+      <!-- Minute Hand -->
+      <div class="min">
+        <div class="mn" id="mn"></div>
+      </div>
+
+      <!-- Second Hand -->
+      <div class="sec">
+        <div class="sc" id="sc"></div>
+      </div>
+    </div>
+
+    <!-- JavaScipt Clock Movement -->
+    <script type="module" src="regClock.js"></script>
   </body>
 </html>

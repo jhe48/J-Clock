@@ -68,6 +68,24 @@ moon.position.y = 0;
 
 
 
+// Temporary Clock Body
+const clockSkin = new THREE.TextureLoader().load('Images/clock.png');
+
+const clock = new THREE.Mesh(
+  new THREE.CircleGeometry(4, 32, 0, 6.28),
+  new THREE.MeshStandardMaterial({
+    map: clockSkin
+  })
+);
+
+const clockFrame = new THREE.Mesh(
+  new THREE.CircleGeometry(4.8, 32, 0, 6.28),
+  new THREE.MeshStandardMaterial({
+    color: 0x091921
+  })
+);
+clockFrame.position.z = -0.5; //Behind OG clock.
+
 
 
 
@@ -80,16 +98,10 @@ const spotlight = new THREE.AmbientLight(0xffffff);
 // Extra Options
 //const notInvis = new THREE.PointLightHelper(flashlight);
 //const controls = new OrbitControls(camera1, render1.domElement );
- 
 
 
 
 
-// Sunset Background 
-scene1.background = new THREE.Color( 0xFAC358 );
-
-// Night Background
-scene1.background = new THREE.Color( 0x392033 );
 
 //const bgImage = new THREE.TextureLoader().load('');
 
@@ -103,7 +115,9 @@ scene1.add(
   sun,
   moon,
   flashlight,
-  spotlight
+  spotlight,
+  clock,
+  clockFrame, 
 );
 
 
@@ -128,10 +142,41 @@ function animate() {
 
   requestAnimationFrame( animate );
 
+  // Sun & Moon objects indefinitely rotate.
   sun.rotation.y += 0.001;
   moon.rotation.y += 0.003;
 
-  //controls.update();
+  // Scenery change for time of day.
+  const day = new Date();
+  const timeOfDay = day.getHours();
+
+  // Background of background color change
+  const bgbg = document.querySelector('body');
+
+  // Font color change
+  const title = document.querySelector('p');
+
+  if (timeOfDay < 12) {
+    // Morning Background if 0-11:00am.
+    scene1.background = new THREE.Color( 0xFAC358 );
+    bgbg.style.background = '#FAC358';
+    title.style.color = '#E930C1';
+
+  } else if (timeOfDay == 12 && timeOfDay < 17){
+    // Sunset Background if 12pm.
+    scene1.background = new THREE.Color( 0xF5961F );
+    bgbg.style.background = '#F5961F';
+    title.style.color = '#B02227';
+
+  } else if (timeOfDay >= 17){
+    // Night Background if 5:00pm.
+    scene1.background = new THREE.Color( 0x392033 );
+    bgbg.style.background = '#392033';
+    title.style.color = '#A0FC24';
+  }
+
+  // For more detailed view of the scene.
+  // controls.update();
 
   render1.render( scene1, camera1 );
 
