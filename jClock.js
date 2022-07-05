@@ -117,7 +117,7 @@ scene1.add(
   flashlight,
   spotlight,
   clock,
-  clockFrame, 
+  clockFrame
 );
 
 
@@ -162,7 +162,7 @@ function animate() {
     bgbg.style.background = '#FAC358';
     title.style.color = '#E930C1';
 
-  } else if (timeOfDay == 12 && timeOfDay < 17){
+  } else if (timeOfDay >= 12 && timeOfDay < 17){
     // Sunset Background if 12pm.
     scene1.background = new THREE.Color( 0xF5961F );
     bgbg.style.background = '#F5961F';
