@@ -81,7 +81,7 @@ const clock = new THREE.Mesh(
 const clockFrame = new THREE.Mesh(
   new THREE.CircleGeometry(4.8, 32, 0, 6.28),
   new THREE.MeshStandardMaterial({
-    color: 0x091921
+    color: 0x040e12
   })
 );
 clockFrame.position.z = -0.5; //Behind OG clock.
@@ -128,7 +128,7 @@ function genStars() {
   const stars = new THREE.Mesh( starSkel, starSkin );
 
   const [x, y] = Array(3).fill().map(() => THREE.MathUtils.randFloatSpread (100));
-  stars.position.set(x, y, 0);
+  stars.position.set(x, y, -1);
   scene1.add(stars);
 }
 // Stars made with Love <3
