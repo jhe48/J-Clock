@@ -34,8 +34,9 @@ npm run dev
 - This project is straightforward with its intended purpose, to tell time. You can just look at the clock to tell you the time, however, when do you ever get the opportunity to practice telling time when no presence of time is available? This will hopefully present a challenge to you. 
 
 # Snapshots of Current Version
-> 10,000 stars displayed. 
+
 ![Screenshot 2022-07-05 at 7 15 33 PM](https://user-images.githubusercontent.com/78707612/177444765-67e6e813-eb5b-4348-b3cf-96ab3cbc4d13.png)
 ![Screenshot 2022-07-05 at 7 16 05 PM](https://user-images.githubusercontent.com/78707612/177444778-926f9d6e-07d8-49b5-9257-2837a0c2b79a.png)
+> 10,000 stars displayed on these images.
 
 
