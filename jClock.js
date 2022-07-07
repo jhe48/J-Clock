@@ -38,7 +38,7 @@ const sunBumps = new THREE.TextureLoader().load('Images/Sun Bumps.jpeg');
 const sunSkin = new THREE.TextureLoader().load('Images/Sun Skin.jpeg');
 
 const sun = new THREE.Mesh(
-  new THREE.SphereGeometry(4, 32, 32),
+  new THREE.SphereBufferGeometry(4, 32, 32),
   new THREE.MeshStandardMaterial( { 
     map: sunSkin,
     normalMap: sunBumps
@@ -56,7 +56,7 @@ const moonSkin = new THREE.TextureLoader().load('Images/Moon Skin.jpeg');
 // Mesh takes shape/skeleton & texture/skin
 // Our moon will also include normal map/ physical features
 const moon = new THREE.Mesh(
-  new THREE.SphereGeometry(4, 32, 32),
+  new THREE.SphereBufferGeometry(4, 32, 32),
   new THREE.MeshStandardMaterial( { 
     map: moonSkin,
     normalMap: moonBumps
@@ -72,14 +72,14 @@ moon.position.y = 0;
 const clockSkin = new THREE.TextureLoader().load('Images/clock.png');
 
 const clock = new THREE.Mesh(
-  new THREE.CircleGeometry(4, 32, 0, 6.28),
+  new THREE.CircleBufferGeometry(4, 32, 0, 6.28),
   new THREE.MeshStandardMaterial({
     map: clockSkin
   })
 );
 
 const clockFrame = new THREE.Mesh(
-  new THREE.CircleGeometry(4.8, 32, 0, 6.28),
+  new THREE.CircleBufferGeometry(4.8, 32, 0, 6.28),
   new THREE.MeshStandardMaterial({
     color: 0x040e12
   })
@@ -123,7 +123,7 @@ scene1.add(
 
 // Function to generate Stars
 function genStars() {
-  const starSkel = new THREE.SphereGeometry(0.01, 5, 5);
+  const starSkel = new THREE.SphereBufferGeometry(0.09, 5, 5);
   const starSkin = new THREE.MeshStandardMaterial( { color: 0xffffff } );
   const stars = new THREE.Mesh( starSkel, starSkin );
 
@@ -131,9 +131,8 @@ function genStars() {
   stars.position.set(x, y, -1);
   scene1.add(stars);
 }
-// Stars made with Love <3
-Array(100).fill().forEach(genStars);
-
+let numberOfStars = 0;
+//Adjust numbers in lines 171-176
 
 
 
@@ -161,18 +160,22 @@ function animate() {
     scene1.background = new THREE.Color( 0xFAC358 );
     bgbg.style.background = '#FAC358';
     title.style.color = '#E930C1';
+    numberOfStars = 0;
 
   } else if (timeOfDay >= 12 && timeOfDay < 17){
     // Sunset Background if 12pm.
     scene1.background = new THREE.Color( 0xF5961F );
     bgbg.style.background = '#F5961F';
     title.style.color = '#B02227';
+    numberOfStars = 0;
 
   } else if (timeOfDay >= 17){
     // Night Background if 5:00pm.
     scene1.background = new THREE.Color( 0x392033 );
     bgbg.style.background = '#392033';
     title.style.color = '#A0FC24';
+    numberOfStars = 100;
+
   }
 
   // For more detailed view of the scene.
@@ -182,3 +185,4 @@ function animate() {
 
 }
 animate();
+Array(numberOfStars).fill().forEach(genStars); 
