@@ -30,6 +30,26 @@ npm run dev
 ```
 - *You can adjust the array size on line 135 of jClock.js for that amount of stars to display on the screen.*
 
+## Bugs & Temporary Fixes
+- There may be a bug after running ``` bash npm run dev ``` that reads the following:
+
+``` bash
+
+The following dependencies are imported but could not be resolved:
+
+  regClock.js (imported by /Users/Jack/Downloads/Jacky_Code/J-Clock/index.html)
+
+Are they installed?
+
+```
+- To fix this:
+-- type (CTRL + C) in terminal
+-- comment out line 55 on index.html
+-- move regClock.js to the Temp_Bug_Fix Folder
+-- run ``` bash npm run dev ``` again. 
+-- Then just simply 'un-comment' line 55 in index.html and move regClock.js out of the folder.
+> *Current working on a solution to this issue.*
+
 ## Use of Project
 - This project is straightforward with its intended purpose, to tell time. You can just look at the clock to tell you the time, however, when do you ever get the opportunity to practice telling time when no presence of time is available? This will hopefully present a challenge to you. 
 
