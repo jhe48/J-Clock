@@ -28,7 +28,7 @@ npm install three
 npm run dev
 
 ```
-- *You can adjust the array size on line 135 of jClock.js for that amount of stars to display on the screen.*
+- *You can adjust the number on line 177 of jClock.js for that amount of stars to display on the screen.*
 
 ## Bugs & Temporary Solutions
 There may be a bug after running ``` npm run dev ``` that reads the following:
