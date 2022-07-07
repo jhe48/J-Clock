@@ -43,13 +43,13 @@ Are they installed?
 
 ```
 To fix this:
-- Type (CTRL + C) in terminal
-- Comment out line 55 on index.html
-- Move regClock.js to the Temp_Bug_Fix Folder
+- Type (CTRL + C) in terminal.
+- Comment out line 55 on **index.html**.
+- Move **regClock.js** to the Temp_Bug_Fix folder.
 - Run ``` npm run dev ``` again. 
-- Undo the commenting line 55 in index.html.
-- Move regClock.js out of the folder.
-- Save changes in index.html
+- Undo the commenting on line 55 in **index.html**.
+- Move **regClock.js** out of the folder.
+- Save changes in **index.html**.
 > *Currently working on a solution to this issue.*
 
 ## Use of Project
