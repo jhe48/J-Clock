@@ -10,8 +10,8 @@
 - This project is still in progress as you will later see in the ‘Snapshots’ section. However, I do plan on implementing a functional clock that tells accurate time as well as having the sun & moon move accordingly. 
 
 ## Tools Used
-- ViteJS
 - Three.js
+- ViteJS
 > This repository does not include these modules.
 
 ## Setup
@@ -43,12 +43,12 @@ Are they installed?
 
 ```
 To fix this:
-- Type (CTRL + C) in terminal.
+- Type (CTRL + C) to return to terminal.
 - Comment out line 55 on **index.html**.
 - Move **regClock.js** to the Temp_Bug_Fix folder.
 - Run ``` npm run dev ``` again. 
 - Undo the commenting on line 55 in **index.html**.
-- Move **regClock.js** out of the folder.
+- Move **regClock.js** back into your directory.
 - Save changes in **index.html**.
 > *Currently working on a solution to this issue.*
 
