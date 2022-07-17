@@ -53,7 +53,7 @@ To fix this:
 > *Currently working on a solution to this issue.*
 
 ## Use of Project
-- This project is straightforward with its intended purpose, to tell time. You can just look at the clock to tell you the time, however, when do you ever get the opportunity to practice telling time when no presence of time is available? This will hopefully present a challenge to you. 
+- This project tells time. You can view time both through the position of the Sun & Moon or through the clock on the screen. 
 
 # Snapshots of Current Version
 
