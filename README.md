@@ -1,7 +1,7 @@
 # J-Clock
 
 ## Documentation
-- This program was created by Jacky He on 01/03/2022.
+This program was created by Jacky He on 01/03/2022.
 > *“Better three hours too soon than a minute too late.”*
 
 ## Description 
@@ -53,7 +53,7 @@ To fix this:
 > *Currently working on a solution to this issue.*
 
 ## Use of Project
-- This project tells time. You can view time both through the position of the Sun & Moon or through the clock on the screen. 
+This project tells time. You can view time both through the position of the Sun & Moon or through the clock on the screen. 
 
 # Snapshots of Current Version
 
